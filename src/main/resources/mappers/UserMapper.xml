@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.caomei.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.caomei.Model.User">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="user_id" jdbcType="INTEGER" property="Id" />
+        <result column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="message_id" jdbcType="INTEGER" property="messageId" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbg.generated  提高编码效率
+        -->
+     user_id, user_nickname
+    </sql>
+    <select id="getAllUser" resultType="com.caomei.Model.User">
+        select user_nickname from mango_user
+    </select>
+
+</mapper>
